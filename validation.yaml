@@ -1,0 +1,12 @@
+---
+- name: RHCE Playbook 01
+  hosts: all
+  tasks:
+
+    - name: "Creating a nested directories"
+      ansible.builtin.file:
+                             path: "/tmp/d1/d2/d3"
+                             state: directory
+
+    - name: "Creating empty file"
+      ansible.builtin.shell: "touch /tmp/empty.txt"
