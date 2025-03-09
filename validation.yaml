@@ -3,10 +3,10 @@
   hosts: all
   tasks:
 
-    - name: "Creating a nested directories"
+    - name: "Creating a nested directories inside /tmp directory"
       ansible.builtin.file:
                              path: "/tmp/d1/d2/d3"
                              state: directory
 
-    - name: "Creating empty file"
+    - name: "Creating empty file inside /tmp directory"
       ansible.builtin.shell: "touch /tmp/empty.txt"
